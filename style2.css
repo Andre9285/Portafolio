@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+/* Encabezado */
+header {
+    background-color: rgb(159, 18, 18);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+  margin: 0 0 20px; /* Espacio debajo del título */
+  font-size: 2.5em;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px; /* Espacio encima del nav */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 20px; /* Espacio entre elementos de nav */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+    color: white; /* Cambia de color al pasar el mouse */
+    border-bottom: 2px solid white; /* Agrega un borde inferior */
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+}
+
+/* Estilos de la sección de proyectos */
+#proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos */
+}
+
+/* Estilos de la tarjeta */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    background-color: rgb(159, 18, 18);
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 550px; 
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita desbordamiento */
+    transition: transform 0.2s; /* Efecto de transición al pasar el mouse */
+    margin: 5px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta al pasar el mouse */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.card-body {
+    padding: 20px; /* Aumenta el espaciado interno */
+}
+
+.card-title {
+    font-size: 1.5em; /* Aumenta el tamaño del título */
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-text {
+    font-size: 1em; /* Aumenta el tamaño del texto */
+    margin-bottom: 30px;
+    color: white;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+    padding: 12px 20px; /* Aumenta el espaciado del botón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Efecto hover para el botón */
+.btn-primary:hover {
+    scale: 1.1;
+    color: white;
+    border: 2px solid black;
+    background-color: black;
+    box-shadow: 0 0 40px 5px white;
+}
+
+@media (max-width: 768px) {
+    .card-deck {
+        flex-direction: column; /* Hace que las tarjetas se apilen verticalmente */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .card {
+        width: 100%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
+        max-width: 100%; /* Evita desbordamientos */
+        margin: 10px 0; /* Espaciado entre tarjetas */
+    }
+
+    /* Ajusta el espaciado en el botón */
+    .btn-primary {
+        width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Ajusta el tamaño del texto para móviles */
+    .card-title {
+        font-size: 1.3em;
+    }
+
+    .card-text {
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del título para móviles */
+    }
+}
+
